@@ -9,11 +9,11 @@ CONFIG_FILE="/opt/backup/backup.conf"
 DEFAULT_CONFIG=$(
   cat <<EOL
 # Путь к файлу или папке для бэкапа (например, /home/su/dockerImg)
-BACKUP_SRC="/home/su/dockerImg"
+BACKUP_SRC="/home/su/backup"
 # Протокол передачи: scp (простая копия по SSH) или rsync (синхронизация)
 TRANSFER_PROTOCOL="scp"
 # Адрес удаленного сервера: user@host:/path (например, tapochek@10.20.7.16:/home/tapochek)
-BACKUP_DEST="tapochek@10.20.7.16:/home/tapochek"
+BACKUP_DEST="su@192.168.168.0:/home/su"
 # Расписание systemd-таймера (например, *-*-* 23:15:00 для ежедневного запуска в 23:15)
 SCHEDULE="*-*-* 23:15:00"
 # Тип сжатия: zip, tar.gz или none (без сжатия)
@@ -27,9 +27,9 @@ ARCHIVE_NAME_FORMAT="backup_%Y%m%d_%H%M%S"
 # Уведомления в Telegram: yes или no
 TELEGRAM_NOTIFICATIONS="yes"
 # Токен Telegram-бота (получите через @BotFather)
-TELEGRAM_BOT_TOKEN="8400134437:AAHrI8NfOUQTepzgNkqDNdD44OPb2Jus_To"
+TELEGRAM_BOT_TOKEN="bot-token"
 # ID чата для уведомлений (узнайте через @getmyid_bot)
-TELEGRAM_CHAT_ID="5403866249"
+TELEGRAM_CHAT_ID="chat_id"
 # Путь к SSH-ключу (для root, использующего ключи пользователя su)
 SSH_KEY="/home/su/.ssh/id_rsa"
 EOL
