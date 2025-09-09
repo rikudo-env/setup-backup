@@ -12,7 +12,7 @@ DEFAULT_CONFIG=$(
 BACKUP_SRC="/home/su/backup"
 # Протокол передачи: scp (простая копия по SSH) или rsync (синхронизация)
 TRANSFER_PROTOCOL="scp"
-# Адрес удаленного сервера: user@host:/path (например, tapochek@10.20.7.16:/home/tapochek)
+# Адрес удаленного сервера: user@host:/path (например, su@192.168.168.0:/home/su)
 BACKUP_DEST="su@192.168.168.0:/home/su"
 # Расписание systemd-таймера (например, *-*-* 23:15:00 для ежедневного запуска в 23:15)
 SCHEDULE="*-*-* 23:15:00"
